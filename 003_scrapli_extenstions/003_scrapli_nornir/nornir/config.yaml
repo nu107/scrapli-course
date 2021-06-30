@@ -1,0 +1,19 @@
+---
+inventory:
+  plugin: YAMLInventory
+  options:
+    host_file: "003_scrapli_extenstions/003_scrapli_nornir/nornir/inventory/hosts.yaml"
+    group_file: "003_scrapli_extenstions/003_scrapli_nornir/nornir/inventory/groups.yaml"
+    defaults_file: "003_scrapli_extenstions/003_scrapli_nornir/nornir/inventory/defaults.yaml"
+
+logging:
+  enabled: False
+
+#extras:
+#  connection_options:
+#    scrapli:
+#      port: 22
+#      extras:
+#        ssh_config_file: True
+#        auth_strict_key: False
+#        transport: # ssh2 or paramiko, default system

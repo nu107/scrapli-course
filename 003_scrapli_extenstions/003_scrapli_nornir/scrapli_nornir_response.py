@@ -7,9 +7,7 @@ from nornir_scrapli.tasks import send_command
 from rich import print
 
 # Init Nornir with Nornir config file
-config_file = (
-    "003_scrapli_plugins_extenstions/003_scrapli_nornir/nornir/config.yaml"
-)
+config_file = "003_scrapli_extenstions/003_scrapli_nornir/nornir/config.yaml"
 nr = InitNornir(config_file=config_file)
 
 # Set inventory credentials from environment variables
