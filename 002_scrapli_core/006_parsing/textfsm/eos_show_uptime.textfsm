@@ -1,0 +1,7 @@
+Value TIME (\S+)
+Value UPTIME (\S+)
+Value USERS (\d+)
+Value LOAD_AVERAGE (\S+)
+
+Start
+  ^\s*${TIME}\s+up\s+${UPTIME}.*${USERS}\s+.*load average.\s+${LOAD_AVERAGE} -> Record

@@ -1,0 +1,4 @@
+{{ interface_name }} is up, line protocol is up (connected)
+  Ethernet MTU {{ mtu }} bytes
+  {{ duplex }}, Unconfigured, auto negotiation: off, uni-link: n/a
+     {{ input_errors }} input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
