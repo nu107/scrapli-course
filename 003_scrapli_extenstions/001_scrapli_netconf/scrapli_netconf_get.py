@@ -7,11 +7,11 @@ from scrapli_netconf.driver import NetconfDriver
 
 # Create device dict()
 device = {
-    "host": "172.29.151.7",
+    "host": "nebula.packetflow.co.uk",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
-    "port": 830,
+    "port": 9830,
 }
 
 
