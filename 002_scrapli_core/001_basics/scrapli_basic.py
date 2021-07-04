@@ -8,11 +8,11 @@ from scrapli import Scrapli
 # Create device dict()
 device = {
     "host": "nebula.packetflow.co.uk",
-    "port": 9007,
+    "port": 9001,
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
-    "platform": "arista_eos",
+    "platform": "cisco_nxos",
 }
 
 # Instantiate Scrapli driver with device dict()
