@@ -4,7 +4,7 @@ import os
 
 from scrapli import Scrapli
 from scrapli_cfg import ScrapliCfg
-from scripts import read_file
+from helpers import read_file
 
 BACKUP_FILENAME = "running-config.txt"
 
