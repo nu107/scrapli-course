@@ -11,7 +11,7 @@ device = {
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
-    "port": 9830,
+    "port": 9831,
 }
 
 
