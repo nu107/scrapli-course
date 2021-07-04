@@ -1,7 +1,11 @@
 import os
 
-from scrapli.driver.core import (AsyncEOSDriver, AsyncIOSXEDriver,
-                                 AsyncJunosDriver, AsyncNXOSDriver)
+from scrapli.driver.core import (
+    AsyncEOSDriver,
+    AsyncIOSXEDriver,
+    AsyncJunosDriver,
+    AsyncNXOSDriver,
+)
 
 DEVICES = [
     {
@@ -61,7 +65,7 @@ DEVICES = [
     {
         "auth_username": os.getenv("LAB_USERNAME"),
         "auth_password": os.getenv("LAB_PASSWORD"),
-        "host": "172.29.151.7",
+        "host": "nebula.packetflow.co.uk",
         "port": 22,
         "transport": "asyncssh",
         "auth_strict_key": False,
