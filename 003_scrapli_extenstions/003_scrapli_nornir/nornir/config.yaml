@@ -7,8 +7,11 @@ inventory:
     defaults_file: "003_scrapli_extenstions/003_scrapli_nornir/nornir/inventory/defaults.yaml"
 
 logging:
-  enabled: False
+  enabled: True
 
+# Below provides an example on how to
+# change the transport and connection details
+#
 #extras:
 #  connection_options:
 #    scrapli:
