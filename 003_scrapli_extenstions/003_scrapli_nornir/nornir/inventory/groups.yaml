@@ -4,7 +4,6 @@ nxos:
   connection_options:
     scrapli:
       platform: cisco_nxos
-      port: 22
       extras:
         ssh_config_file: True
         auth_strict_key: False
@@ -13,7 +12,6 @@ iosxe:
   connection_options:
     scrapli:
       platform: cisco_iosxe
-      port: 22
       extras:
         ssh_config_file: True
         auth_strict_key: False
@@ -22,7 +20,6 @@ junos:
   connection_options:
     scrapli:
       platform: juniper_junos
-      port: 22
       extras:
         ssh_config_file: True
         auth_strict_key: False
@@ -31,7 +28,6 @@ eos:
   connection_options:
     scrapli:
       platform: arista_eos
-      port: 22
       extras:
         ssh_config_file: True
         auth_strict_key: False
