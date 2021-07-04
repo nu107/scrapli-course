@@ -1,11 +1,7 @@
 import os
 
-from scrapli.driver.core import (
-    AsyncEOSDriver,
-    AsyncIOSXEDriver,
-    AsyncJunosDriver,
-    AsyncNXOSDriver,
-)
+from scrapli.driver.core import (AsyncEOSDriver, AsyncIOSXEDriver,
+                                 AsyncJunosDriver, AsyncNXOSDriver)
 
 DEVICES = [
     {
