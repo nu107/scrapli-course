@@ -4,7 +4,6 @@ import os
 
 from rich import print
 from scrapli import Scrapli
-from scripts import get_absolute_path
 
 # Create device dict()
 device = {
@@ -15,6 +14,12 @@ device = {
     "auth_strict_key": False,
     "platform": "arista_eos",
 }
+
+# Helper function 
+def get_absolute_path(filename):
+    # Get absolute path to command file
+    absolute_path = os.path.dirname(os.path.realpath(__file__))
+    return f"{absolute_path}/{filename}"
 
 # Scrapli context manager - Instantiate, open and close connection
 with Scrapli(**device) as conn:
