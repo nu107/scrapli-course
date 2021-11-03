@@ -14,7 +14,7 @@ def test_scrapli_save_on_close():
 def test_scrapli_send_config():
     p = importlib.import_module("002_scrapli_core.005_config.scrapli_send_config")
 
-    assert p.response == True
+    assert p.response.failed == False
 
 
 def test_scrapli_send_configs_from_file():
