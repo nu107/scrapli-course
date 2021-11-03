@@ -8,5 +8,6 @@ help:
 
 build: ## Build
 	docker build -t scrapli-course . -f tests/Dockerfile
-test: ## Run test
+	
+test: ## Test
 	docker run -v $(shell pwd):/source -w /local --env-file tests/.env scrapli-course:latest pytest tests/ -vvv
