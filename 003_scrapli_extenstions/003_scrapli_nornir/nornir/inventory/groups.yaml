@@ -15,6 +15,11 @@ iosxe:
       extras:
         ssh_config_file: True
         auth_strict_key: False
+    napalm:
+      extras:
+        optional_args:
+          fast_cli: False
+
 junos:
   platform: junos
   connection_options:

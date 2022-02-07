@@ -2,9 +2,12 @@
 
 import os
 
+from dotenv import load_dotenv
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 from nornir_utils.plugins.functions import print_result
+
+load_dotenv()
 
 # Init Nornir with Nornir config file
 config_file = "003_scrapli_extenstions/003_scrapli_nornir/nornir/config.yaml"

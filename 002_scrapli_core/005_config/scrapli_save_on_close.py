@@ -2,8 +2,11 @@
 
 import os
 
+from dotenv import load_dotenv
 from rich import print
 from scrapli import Scrapli
+
+load_dotenv()
 
 IP_ROUTE = "9.9.9.9/32"
 
@@ -16,8 +19,7 @@ def save_on_close(conn):
 
 # Create device dict()
 device = {
-    "host": "nebula.packetflow.co.uk",
-    "port": 9007,
+    "host": "172.29.151.7",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,

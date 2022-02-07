@@ -2,9 +2,12 @@
 
 import os
 
+from dotenv import load_dotenv
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 from rich import print
+
+load_dotenv()
 
 # Init Nornir with Nornir config file
 config_file = "003_scrapli_extenstions/003_scrapli_nornir/nornir/config.yaml"
@@ -23,10 +26,7 @@ results = nr.run(task=send_command, command="show ip ospf neighbors")
 # Print results directly from Scrapli response
 print(results["spine1-nxos"].scrapli_response.textfsm_parse_output())
 
-print(
-    f"scrapli_response.failed = "
-    f"{results['spine1-nxos'].scrapli_response.failed}"
-)
+print(f"scrapli_response.failed = " f"{results['spine1-nxos'].scrapli_response.failed}")
 
 print(
     f"scrapli_response.elapsed_time = "

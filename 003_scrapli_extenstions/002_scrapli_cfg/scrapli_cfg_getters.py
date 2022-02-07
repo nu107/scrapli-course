@@ -2,18 +2,20 @@
 
 import os
 
+from dotenv import load_dotenv
 from rich import print
 from scrapli import Scrapli
 from scrapli_cfg import ScrapliCfg
 
 from helpers import write_file
 
+load_dotenv()
+
 BACKUP_FILENAME = "running-config.txt"
 
 # Create device dict()
 device = {
-    "host": "nebula.packetflow.co.uk",
-    "port": 9007,
+    "host": "172.29.151.7",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
@@ -36,6 +38,4 @@ with Scrapli(**device) as conn:
     get_version_result = cfg_conn.get_version().result
 
     # Print summary
-    print(
-        f"Device version = {get_version_result}, Config saved = {BACKUP_FILENAME}"
-    )
+    print(f"Device version = {get_version_result}, Config saved = {BACKUP_FILENAME}")

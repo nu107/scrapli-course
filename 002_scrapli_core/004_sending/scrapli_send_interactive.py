@@ -2,13 +2,16 @@
 
 import os
 
+from dotenv import load_dotenv
 from rich import print
 from scrapli import Scrapli
 
+load_dotenv()
+
+
 # Create device dict()
 device = {
-    "host": "nebula.packetflow.co.uk",
-    "port": 9001,
+    "host": "172.29.151.1",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
@@ -26,7 +29,7 @@ with Scrapli(**device) as conn:
             ("2", "Packet-size [56] :", False),
             ("5", "Timeout in seconds [2] :", False),
             ("2", "Sending interval in seconds [0] :", False),
-            ("no", "Extended commands [no] :", False),
+            ("0", "Extended commands [no] :", False),
             ("no", "Sweep range of sizes [no] :", False),
             ("no", "spine1-nxos#", False),
         ]

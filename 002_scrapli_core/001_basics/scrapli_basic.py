@@ -2,13 +2,15 @@
 
 import os
 
+from dotenv import load_dotenv
 from rich import print
 from scrapli import Scrapli
 
+load_dotenv()
+
 # Create device dict()
 device = {
-    "host": "nebula.packetflow.co.uk",
-    "port": 9001,
+    "host": "172.29.151.1",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
@@ -22,7 +24,7 @@ conn = Scrapli(**device)
 conn.open()
 
 # View available Driver methods
-print(dir(conn))
+# print(dir(conn))
 
 # Send command to device
 response = conn.send_command("show run")

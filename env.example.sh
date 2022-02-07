@@ -1,3 +1,0 @@
-export LAB_USERNAME=<USERNAME>
-export LAB_PASSWORD=<PASSWORD>
-export PYTHONPATH=`pwd`

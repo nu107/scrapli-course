@@ -2,10 +2,12 @@
 
 import os
 
+from dotenv import load_dotenv
 from nornir import InitNornir
 from nornir_scrapli.functions import print_structured_result
 from nornir_scrapli.tasks import send_command
 
+load_dotenv()
 # Init Nornir with Nornir config file
 config_file = "003_scrapli_extenstions/003_scrapli_nornir/nornir/config.yaml"
 nr = InitNornir(config_file=config_file)
@@ -19,6 +21,9 @@ nr = nr.filter(platform="nxos")
 
 # Run the Scrapli send command task against the filter devices
 results = nr.run(task=send_command, command="show ip ospf neighbor")
+# The above code is using the textfsm parser to parse the output of the command "show ip int
+# brief"
+
 
 # Print the results from all the run tasks
 print_structured_result(results, parser="textfsm", fail_to_string=True)

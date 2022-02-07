@@ -2,14 +2,16 @@
 
 import os
 
+from dotenv import load_dotenv
 from rich import print
 from scrapli import Scrapli
 from scrapli_cfg import ScrapliCfg
 
+load_dotenv()
+
 # Create device dict()
 device = {
-    "host": "nebula.packetflow.co.uk",
-    "port": 9007,
+    "host": "172.29.151.7",
     "auth_username": os.getenv("LAB_USERNAME"),
     "auth_password": os.getenv("LAB_PASSWORD"),
     "auth_strict_key": False,
